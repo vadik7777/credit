@@ -1,3 +1,9 @@
+**Запуск приложения**
+
+- Скачать содержимое папки - build/libs
+- Запустить файл run.bat
+- Открыть браузер и перейти на http://localhost:8091/
+
 **Практическое задание для соискателя**
 
 Реализовать веб-приложение &quot;Кредитный калькулятор&quot;, который в зависимости от параметров введенных пользователем, а также заданных параметров кредита, рассчитывает аннуитетный график погашения кредита в виде таблицы:
@@ -29,6 +35,6 @@ x – месячный платёж, S – первоначальная сумм
 
 Чтобы определить часть, идущую на погашение долга, необходимо из месячного платежа вычесть начисленные проценты.
 
-s = x – pn, где s – часть выплаты, идущая на погашение долга, x – месячный платёж,  ![](data:image/*;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAPABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1HxNr93oP9nG20z+0Ptl0tt5McpWYsefkXYVOFWRiXZFATrzVvRtTm1EXkN1bJb3llP8AZ50ilMse4xpICrlVJG2ReqjnI5ABOTqenanrPi63CtqOmWOnwO0N7CbZ1nmfaDhZA5Uqu4BtmTvcZUffr+MLtvCnhi1/sid7N45y4IjWYSKiSTzCTedzlkjlOQwZnK5cZZqAOxorM8OXM154Y0m6uLpLuaazhkkuI1KrKxQEuAQpAJOcYHXoOlFAH//Z)— начисленные проценты, на момент n-ой выплаты
+s = x – pn, где s – часть выплаты, идущая на погашение долга, x – месячный платёж,  pn— начисленные проценты, на момент n-ой выплаты
 
 В расчетах необходимо использовать округление к ближайшему целому до двух знаков после запятой.

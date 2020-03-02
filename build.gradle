@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'free.credit'
-version = '0.0.1-SNAPSHOT'
+version = 'v1'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -30,4 +30,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+bootJar {
+    mainClassName = 'free.credit.calc.CalcApplication'
 }
