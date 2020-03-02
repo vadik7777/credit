@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Кредитный калькулятор</title>
+    <link href="../css/main.css" rel="stylesheet">
+</head>
+<body>
+<h1>Кредитный калькулятор(аннуитетный график)</h1>
+<h2>Введите данные для расчета:</h2>
+    <form th:action="@{/}" th:object="${inputData}" method="post">
+        <table class="inputData">
+            <tbody>
+                <tr>
+                    <td>Процент (%):</td>
+                    <td><input type="number" readonly="true" th:field="*{prosent}" /></td>
+                    <td th:if="${#fields.hasErrors('prosent')}" th:errors="*{prosent}">Ошибка ввода процентов</td>
+                </tr>
+                <tr>
+                    <td>Сумма (руб):</td>
+                    <td><input type="number" min="100000" max="5000000" th:field="*{summa}"/></td>
+                    <td th:if="${#fields.hasErrors('summa')}" th:errors="*{summa}">Ошибка ввода суммы</td>
+                </tr>
+                <tr>
+                    <td>Срок кредита (мес):</td>
+                    <td><input type="number" min="12" max="60" th:field="*{periodInMonths}"/></td>
+                    <td th:if="${#fields.hasErrors('periodInMonths')}" th:errors="*{periodInMonths}">Ошибка ввода срока кредита</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Рассчитать</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

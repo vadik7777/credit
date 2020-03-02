@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица расчетов</title>
+    <link href="../css/main.css" rel="stylesheet">
+</head>
+<body>
+<h1>Таблица расчетов</h1>
+<h2>Данные для расчета:</h2>
+<table class="outputRezult">
+    <tbody>
+        <tr>
+            <th>Процент</th>
+            <th>Сумма</th>
+            <th>Срок кредита</th>
+        </tr>
+        <tr>
+            <td th:text="${inputData.prosent} + ' %'"></td>
+            <td th:text="${inputData.summa} + ' руб'"></td>
+            <td th:text="${inputData.periodInMonths} + ' мес'"></td>
+        </tr>
+    </tbody>
+</table>
+<h2>Результаты расчета:</h2>
+<table class="outputRezult">
+    <tbody>
+    <tr>
+        <th>Месяц/Год</th>
+        <th>Платеж по основному долгу</th>
+        <th>Платеж по процентам</th>
+        <th>Остаток основного долга</th>
+        <th>Общая сумма платежа</th>
+    </tr>
+    <tr th:each="elem : ${raschet}">
+        <td th:text="${elem.monthYear}"></td>
+        <td th:text="${elem.platejDolg}"></td>
+        <td th:text="${elem.platejProsent}"></td>
+        <td th:text="${elem.ostatokDolg}"></td>
+        <td th:text="${elem.platej}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
