@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 @Component
-@Scope("prototype")
 public class InputData {
 
     @NotNull
@@ -47,5 +47,15 @@ public class InputData {
 
     public void setPeriodInMonths(Integer periodInMonths) {
         this.periodInMonths = periodInMonths;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        InputData inputData = (InputData) o;
+        return Objects.equals(summa, inputData.summa) &&
+                Objects.equals(prosent, inputData.prosent) &&
+                Objects.equals(periodInMonths, inputData.periodInMonths);
     }
 }

@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Scope("session")
 public class CalcService {
 
     @Autowired

@@ -3,6 +3,7 @@ package free.credit.calc.model;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 @Component
 @Scope("prototype")
@@ -52,5 +53,17 @@ public class CalcData {
 
     public void setPlatej(BigDecimal platej) {
         this.platej = platej;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CalcData calcData = (CalcData) o;
+        return Objects.equals(monthYear, calcData.monthYear) &&
+                Objects.equals(platejDolg, calcData.platejDolg) &&
+                Objects.equals(platejProsent, calcData.platejProsent) &&
+                Objects.equals(ostatokDolg, calcData.ostatokDolg) &&
+                Objects.equals(platej, calcData.platej);
     }
 }
